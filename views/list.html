@@ -1,0 +1,12 @@
+<div ng-controller="topicListController as tlc">
+	<input ng-model="tlc.user" type="text" name="user">
+	<input ng-model="tlc.title" type="text" name="title">
+	<input ng-model="tlc.text" type="text" name="text">
+	<button ng-click="tlc.send(); tlc.clear();"> Send </button>
+	<hr>
+	
+	<div>
+		<topic-card ng-repeat="topic in tlc.topics.list track by $index" data="topic" index="$index">
+		</topic-card>
+	</div>
+</div>

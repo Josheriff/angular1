@@ -4,28 +4,23 @@
 	<title>Argumentify</title>
 </head>
 <body ng-app="appArg">
+	<ui-view></ui-view>
 	<!-- this div above all the app -->
-<div ng-controller="topicController as tc">
-	<input ng-model="tc.user" type="text" name="user">
-	<input ng-model="tc.title" type="text" name="title">
-	<input ng-model="tc.text" type="text" name="text">
-	<button ng-click="tc.send(); tc.clear();"> Send </button>
-	<hr>
-	
-	<div>
-		<topic-card ng-repeat="topic in tc.topics.list" data="topic">
-		</topic-card>
-	</div>
-</div>
 
 <!-- AngularJS -->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
+<!-- ui Router cause ng-router. Nahhhh -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.0/angular-ui-router.js"></script>
 
 <!-- APP -->
 <script type="text/javascript" src="js/app.js"></script>
 
 <!-- controllers -->
+<script type="text/javascript" src="controllers/topic-list.js"></script>
 <script type="text/javascript" src="controllers/topic.js"></script>
+
 
 <!-- services -->
 <script type="text/javascript" src="services/topics.js"></script>
