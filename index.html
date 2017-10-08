@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Argumentify</title>
+</head>
+<body ng-app="appArg">
+	<!-- this div above all the app -->
+<div>
+	<input ng-model="user" type="text" name="user">
+	<input ng-model="title" type="text" name="title">
+	<input ng-model="text" type="text" name="text">
+	<hr>
+	<div>
+		titulo: {{user}}
+		usuario: {{title}}
+		mensaje: {{text}}
+	</div>
+</div>
+<!-- AngularJS -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script type="text/javascript"> 
+
+angular.module("appArg",[])
+
+</script>
+</body>
+</html>
